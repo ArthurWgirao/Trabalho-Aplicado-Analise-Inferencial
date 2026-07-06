@@ -1,79 +1,138 @@
-<!-- Animated typing header -->
-[![Typing SVG](https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=24&duration=2200&pause=1100&color=00E7FF&center=true&vCenter=true&width=1000&lines=Hello%2C+I'm+Arthur+Wagner!;Data+Scientist+%26+AI+Enthusiast.;Passionate+about+Analytics+and+Machine+Learning.;Tech+applied+to+Biology+and+real-world+problems.)](https://git.io/typing-svg)
+#  Análise Inferencial da Quantidade de Gols em Copas do Mundo
 
----
+Projeto desenvolvido para a disciplina de **Análise Inferencial**, com o objetivo de aplicar conceitos de Estatística Inferencial na investigação de uma hipótese relacionada às partidas da Copa do Mundo FIFA.
 
-<div align="center">
+##  Objetivo
 
-# 🌟 **Welcome to my GitHub Profile**
+Investigar se partidas das fases eliminatórias (**mata-mata**) apresentam uma quantidade média de gols inferior às partidas da **fase de grupos**, utilizando dados históricos oficiais da Copa do Mundo.
 
-I'm **Arthur Girão**, a developer passionate about  
-**Data Science**, **Machine Learning**, **Data Analysis**, and applying technology to fields like **biology**, renewable energy, and automation.
+##  Pergunta de Pesquisa
 
-I love transforming raw information into insights, building intelligent models, and discovering patterns hidden in data.
+> Partidas de mata-mata da Copa do Mundo possuem menos gols do que partidas da fase de grupos?
 
-</div>
+##  Base de Dados
 
----
+Foi utilizado um conjunto de dados histórico contendo informações detalhadas das partidas da Copa do Mundo FIFA.
 
-## 🧠 **About Me**
+A análise foi realizada utilizando apenas o arquivo:
 
-- 📊 Focused on **Data Science** and **Data Analysis**  
-- 🤖 Experience with **Machine Learning**, classification models, and automation  
-- 🧬 Interested in applying AI to **biology**, ecology, and environmental studies  
-- 🐦 Built a **bird species classifier using ML**   
-- 🔍 Strong curiosity for analytics, pattern discovery, and real-world data problems  
-- 🚀 Constantly learning and improving my skills  
+- `match_details.json`
 
----
+Após o pré-processamento, os dados foram convertidos para formato CSV e organizados para análise.
 
-## ⚒️ **My Technical Stack**
+##  Metodologia
 
-### **Data Science & Machine Learning**
-- Python  
-- Pandas • NumPy • Matplotlib • Seaborn  
-- Scikit-Learn  
-- Machine Learning Pipelines  
-- Data Cleaning & Feature Engineering  
-- Visualization & Exploratory Analysis  
+O trabalho foi desenvolvido seguindo as principais etapas da Análise Inferencial:
 
-### **Data Engineering & Backend Basics**
-- SQL (PostgreSQL)  
-- APIs with Django / FastAPI  
-- Automation scripts  
-- Data pipelines & ETL basics  
+- Limpeza e preparação dos dados;
+- Análise exploratória;
+- Estatística descritiva;
+- Estimação pontual;
+- Construção de intervalos de confiança;
+- Verificação dos pressupostos estatísticos;
+- Teste de hipóteses;
+- Interpretação dos resultados.
 
-### **Web & Visualization (support tools)**
-- HTML • CSS  
-- Interactive dashboards & visualizations  
+##  Técnicas Estatísticas Utilizadas
 
-### **Other Skills**
-- Git & GitHub  
-- Jupyter Notebooks  
-- Data storytelling  
+- Média
+- Mediana
+- Variância
+- Desvio padrão
+- Histogramas
+- Boxplots
+- Intervalo de confiança (95%)
+- Teste de Shapiro-Wilk
+- Teste de Levene
+- Teste de Mann-Whitney U
 
----
+##  Hipóteses
 
-## 🔗 **Contact Me**
+Hipótese nula:
 
-- 📧 Email: **arthur58723@gmail.com**  
-- 💼 LinkedIn: **[Click here](https://www.linkedin.com/in/arthur-wagner-gir%C3%A3o-muniz-276bba353/)**  
-- 🤝 Open to collaborations in AI, data analytics, and scientific applications  
+> A quantidade de gols nas partidas da fase de grupos e do mata-mata não apresenta diferença estatisticamente significativa.
 
----
+Hipótese alternativa:
 
-## 🚀 **Highlighted Projects**
+> Existe diferença estatisticamente significativa na quantidade de gols entre as duas fases da competição.
 
-- 🐦 **Bird Species Classification using Machine Learning** *(finished)*  
-- 🔆 Solar plant monitoring & data processing system  
-- 📊 Exploratory analysis & visualization notebooks  
-- 🤖 ML models for prediction, classification, and pattern detection  
+##  Principais Resultados
 
----
+- Média de gols (Fase de Grupos): **2,77**
+- Média de gols (Mata-mata): **2,96**
+- Intervalos de confiança apresentaram ampla sobreposição.
+- O teste de Shapiro-Wilk indicou ausência de normalidade.
+- O teste de Levene confirmou homogeneidade das variâncias.
+- Foi aplicado o teste não paramétrico de Mann-Whitney.
 
-<div align="center">
+### Resultado do teste
 
-### ⭐ *Thanks for visiting — feel free to explore my repositories!*  
-### 📡 *Always learning, always analyzing.*  
+- Estatística U = **63563**
+- Valor-p = **0.3184**
 
-</div>
+Como o valor-p foi superior ao nível de significância de 5%, **não houve evidências estatísticas suficientes para rejeitar a hipótese nula**.
+
+##  Conclusão
+
+Embora as partidas de mata-mata tenham apresentado uma média de gols ligeiramente superior à fase de grupos, essa diferença não foi estatisticamente significativa.
+
+Dessa forma, os dados analisados não corroboram a hipótese de que partidas eliminatórias apresentam menos gols do que partidas da fase de grupos.
+
+## 🛠️ Tecnologias Utilizadas
+
+- Python
+- Pandas
+- NumPy
+- SciPy
+- Matplotlib
+- Jupyter Notebook
+
+##  Estrutura do Projeto
+
+```
+.
+├── data/
+│   ├── match_details.json
+│   └── match_details.csv
+│
+├── notebook/
+│   └── Analise_Inferencial_Copa_do_Mundo.ipynb
+│
+├── README.md
+└── requirements.txt
+```
+
+##  Como Executar
+
+Clone o repositório:
+
+```bash
+git clone https://github.com/seu-usuario/seu-repositorio.git
+```
+
+Instale as dependências:
+
+```bash
+pip install -r requirements.txt
+```
+
+Abra o notebook:
+
+```bash
+jupyter notebook
+```
+
+ou
+
+```bash
+jupyter lab
+```
+
+Execute todas as células do notebook para reproduzir a análise.
+
+##  Autores
+
+Projeto desenvolvido para a disciplina de **Análise Inferencial**.
+
+- Vinícius Carvalho Lima
+- Arthur Wagner Girão Muniz
